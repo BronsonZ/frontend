@@ -1,5 +1,5 @@
 import React from "react";
-import '../App.css'
+import "../App.css";
 
 export default class FetchPosts extends React.Component {
   state = {
@@ -28,13 +28,13 @@ export default class FetchPosts extends React.Component {
     return (
       <div>
         {this.state.posts.map((post) => (
-            <div className="Content" key={post.title}>
+          <div className="Content" key={post.title}>
             <h4>{post.title}</h4>
             <div>Author: {post.name}</div>
             <div>{post.contents}</div>
             <br/>
             <div className="Divider"></div>
-            </div>
+          </div>
         ))}
       </div>
     );

@@ -1,15 +1,24 @@
 import React from "react";
 
-export class PostForm extends React.Component {
-  constructor(props) {
-    super(props);
+const defaultState = {
+  title: "",
+  name: "",
+  contents: "",
+}
 
-    this.state = {
-      title: "",
-      name: "",
-      contents: "",
-    };
-  }
+export class PostForm extends React.Component {
+
+  state = defaultState;
+
+  // constructor(props) {
+  //   super(props);
+
+  //   this.state = {
+  //     title: "",
+  //     name: "",
+  //     contents: "",
+  //   };
+  // }
 
 
   async componentDidMount() {
@@ -33,7 +42,8 @@ export class PostForm extends React.Component {
   submithandler = (e) => {
       e.preventDefault()
       this.componentDidMount();
-      window.location.reload(false);
+      this.setState(defaultState);
+      //window.location.reload(false);
   }
 
   render() {
