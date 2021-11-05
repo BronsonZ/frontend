@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+//import { Router } from "@reach/router";
+import './App.css'
+
+import Posts from './components/fetchPosts'
+import PostForm from './components/postForm'
+//import DeleteForm from './components/deleteForm'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1 className='App-header'>Social Media Posts</h1>
+      <Posts/>
+      <PostForm/>
     </div>
+    
   );
 }
 
