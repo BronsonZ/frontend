@@ -32,6 +32,7 @@ export class PostForm extends React.Component {
   submithandler = (e) => {
       e.preventDefault()
       this.componentDidMount();
+      window.location.reload(false);
   }
 
   render() {

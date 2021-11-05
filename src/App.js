@@ -3,7 +3,7 @@ import './App.css'
 
 import Posts from './components/fetchPosts'
 import PostForm from './components/postForm'
-//import DeleteForm from './components/deleteForm'
+import DeleteForm from './components/deleteForm'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <h1 className='App-header'>Social Media Posts</h1>
       <Posts/>
       <PostForm/>
+      <DeleteForm/>
     </div>
     
   );
