@@ -31,7 +31,7 @@ export default class FetchPosts extends React.Component {
           <div className="Content" key={post.title}>
             <h4>{post.title}</h4>
             <div>Author: {post.name}</div>
-            <div>{post.contents}</div>
+            <p>{post.contents}</p>
             <br/>
             <div className="Divider"></div>
           </div>
