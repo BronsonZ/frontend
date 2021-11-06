@@ -1,21 +1,18 @@
 //import { Router } from "@reach/router";
-import './App.css'
 
-import Posts from './components/fetchPosts'
-import PostForm from './components/postForm'
+//import Posts from './components/fetchPosts'
+//import PostForm from './components/postForm'
 import NavBar from './components/navBar'
+import Home from './components/home'
 //import DeleteForm from './components/deleteForm'
 
 function App() {
-  const title = "Social Media Website";
-
   return (
     <div className='App'>
       <NavBar />
-      <div className='Content'>
-        <Posts />
+      <div className='content'>
+        <Home />
       </div>
-      <PostForm />
     </div>
     
   );
