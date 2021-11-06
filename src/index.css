@@ -27,7 +27,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #17399c;
 }
 .content {
   max-width: 600px;
@@ -46,6 +46,6 @@
 }
 .post-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #17399c;
   margin-bottom: 8px;
 }

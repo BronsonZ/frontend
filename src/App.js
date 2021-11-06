@@ -1,20 +1,21 @@
-//import { Router } from "@reach/router";
-
-//import Posts from './components/fetchPosts'
-//import PostForm from './components/postForm'
 import NavBar from './components/navBar'
 import Home from './components/home'
-//import DeleteForm from './components/deleteForm'
+import NewPost from './components/createPost'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
-      <NavBar />
-      <div className='content'>
-        <Home />
+    <BrowserRouter>
+      <div className='App'>
+        <NavBar />
+        <div className='content'>
+          <Switch>
+            <Route exact path="/"><Home/></Route>
+            <Route exact path="/create"><NewPost/></Route>
+          </Switch>
+        </div>
       </div>
-    </div>
-    
+    </BrowserRouter>
   );
 }
 
