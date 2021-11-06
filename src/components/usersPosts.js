@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import useFetch from "../hooks/useFetch";
-import PostList from "./postList";
+import UserPostList from "./userPostList";
 
 const UsersPosts = () => {
 
@@ -10,8 +10,8 @@ const UsersPosts = () => {
     return ( 
         <div className="blog-details">
             {error && <div>{error}</div>}
-            {isLoading && <div>loading posts...</div>}
-            { data && <PostList posts={data.filter(data => data.name === name)} title={name + "'s posts"}/>}
+            {isLoading && <div className="loading">loading posts...</div>}
+            { data && <UserPostList posts={data.filter(data => data.name === name)} title={name + "'s posts"}/>}
         </div>
      );
 }
