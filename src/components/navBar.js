@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <nav className="navbar">
-            <h1>AstroMedia</h1>
+            <Link to='/'><h1>AstroMedia</h1></Link>
             <div className="links">
-                <Link to="/">Home</Link>
                 <Link to="/create" style={{
                     color: "#37425B",
                     backgroundColor: '#ffffff',
