@@ -19,10 +19,11 @@ const PostList = ({ posts, title }) => {
       {sortedPosts.map((post) => (
         <div className="post-preview" key={post.title}>
           <Link to={`/users/${post.name}`}>
-            <h2 className="post-title">{post.title}</h2>
+            <h2>{ post.title }</h2>
+            <div>@{ post.name }</div>
             <p className="post-content">{post.contents}</p>
-            <div>Written by {post.name}</div>
-            {post.img && <Image cloudName="dar0pitop" publicId={post.img} height="150" width="150"/>}
+            
+            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%" />}
             {/* <button onClick={() => handleClick(post.title)}>Delete</button> */}
           </Link>
         </div>

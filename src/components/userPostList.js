@@ -18,7 +18,7 @@ const UserPostList = ({ posts, title }) => {
           <div className="post-preview" key={post.title} >
             <h2 className="post-title">{ post.title }</h2>
                 <p className="post-content">{post.contents}</p>
-                {post.img && <Image cloudName="dar0pitop" publicId={post.img}/>}
+                {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%"/>}
                 {/* <button onClick={() => handleClick(post.title)}>Delete</button> */}
           </div>
         ))}
