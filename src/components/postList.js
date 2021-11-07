@@ -21,9 +21,8 @@ const PostList = ({ posts, title }) => {
           <Link to={`/users/${post.name}`}>
             <h2>{ post.title }</h2>
             <div>@{ post.name }</div>
-            <p className="post-content">{post.contents}</p>
-            
-            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%" />}
+            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%"/>}
+            <p>{post.contents}</p>
             {/* <button onClick={() => handleClick(post.title)}>Delete</button> */}
           </Link>
         </div>

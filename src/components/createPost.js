@@ -94,7 +94,7 @@ const CreatePost = () => {
                     
                     ></input>
                     { !isLoading && <button>Add Post</button>}
-                    { isLoading && <button disabled>Adding Blog</button>}
+                    { isLoading && <button disabled>Adding Post</button>}
 
                 </form>
         </div>
