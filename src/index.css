@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&family=Oxygen&family=Roboto&family=Space+Mono&family=Teko:wght@500&family=Ubuntu&family=Varela+Round&display=swap');
 
 
@@ -19,22 +18,17 @@
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 1000px;
+  max-width: 100vh;
   margin: 0 auto;
   border-bottom: 3px solid #ffffff;
+  margin-left: auto;
 }
-.navbar h1 {
-  color: #ffffff;
-}
-.navbar .links {
+.links {
   margin-left: auto;
 }
 .navbar a {
   text-decoration: none;
   padding: 6px;
-}
-.navbar a:hover {
-  color: #ffffff;
 }
 
 
@@ -52,30 +46,62 @@
 .post-list h1{
   text-align: center;
 }
-.post-preview {
+.post{
+  background-color: #293650;
   border: 3px solid #ffffff;
   border-radius: 13px;
-  /* padding: 10px 16px; */
   margin: 20px 0;
   text-align: center;
 }
-.post-preview:hover {
+.post:hover {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.445);
 }
-.post-preview h2 {
+.post h2 {
+  font-size: 20px;
+  color: #ffffff;
+  padding-top: 3vh;
+}
+.post a{
+  text-decoration: none;
+}
+.post p{
+  padding-bottom: 3vh;
+  padding-top: 1vh;
+  font-size: 19px;
+  overflow-wrap: break-word;
+}
+.post div{
+  padding-bottom: 1.5vh;
+}
+.post img {
+  max-width: 100%;
+}
+
+/* User Post List */
+.users-posts p{
+  text-align: center;
+}
+.user-post-list h1{
+  text-align: center;
+}
+.user-post {
+  background-color: #293650;
+  border: 3px solid #ffffff;
+  border-radius: 13px;
+  margin: 20px 0;
+  text-align: center;
+}
+.user-post h2 {
   font-size: 20px;
   color: #ffffff;
   padding-top: 1.5vh;
-}
-.post-preview a{
-  text-decoration: none;
-}
-.post-preview p{
   padding-bottom: 1.5vh;
+}
+.user-post p{
+  padding-bottom: 1.5vh;
+  padding-top: 1.5vh;
   font-size: 19px;
-}
-.post-preview div{
-  padding-bottom: 1.5vh;
+  overflow-wrap: break-word;
 }
 
 /* Create new post page */
@@ -86,20 +112,20 @@
 }
 .create label {
   text-align: left;
-  display: block;
+  display: flex;
 }
 .create h2 {
   font-size: 20px;
-  color: #ffffff;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .create input, .create textarea, .create select {
   width: 100%;
-  padding: 6px 10px;
+  padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
   box-sizing: border-box;
-  display: block;
+  display: flex;
+  color: #37425B;
 }
 .create button {
   background: #ffffff;
