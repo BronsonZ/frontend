@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Image } from 'cloudinary-react';
+import { Image, Placeholder } from 'cloudinary-react';
 
 const PostList = ({ posts, title }) => {
 
@@ -13,7 +13,7 @@ const PostList = ({ posts, title }) => {
           <Link to={`/users/${post.name}`}>
             <h2>{ post.title }</h2>
             <div>@{ post.name }</div>
-            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%" dpr="auto" quality="auto" fetchFormat="auto"/>}
+            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%" dpr="auto" quality="auto" fetchFormat="auto"><Placeholder type="blur"/></Image>}
             <p>{post.contents}</p>
           </Link>
         </div>
