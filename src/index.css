@@ -73,9 +73,6 @@
 .post div{
   padding-bottom: 1.5vh;
 }
-.post img {
-  max-width: 100%;
-}
 
 /* User Post List */
 .users-posts p{

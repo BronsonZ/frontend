@@ -8,7 +8,7 @@ const UserPostList = ({ posts, title }) => {
         {posts.map(post => (
           <div className="user-post" key={post.title} >
             <h2>{ post.title }</h2>
-            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%" />}
+            {post.img && <Image cloudName="dar0pitop" publicId={post.img} width="100%" dpr="auto" quality="auto" fetchFormat="auto"/>}
                 <p>{post.contents}</p>
           </div>
         ))}
