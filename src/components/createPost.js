@@ -101,6 +101,7 @@ const CreatePost = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></input>
+        <label>Optional Image(max 10MB)</label>
         <input
           type="file"
           style={{ border: 0, color: "#ffffff" }}
