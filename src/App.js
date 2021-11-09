@@ -14,7 +14,7 @@ function App() {
           <Switch>
             <Route exact path="/"><Home/></Route>
             <Route exact path="/create"><NewPost/></Route>
-            <Route exact path="/users/:name"><UsersPosts/></Route>
+            <Route exact path="/users/:username"><UsersPosts/></Route>
             <Route path="*"><NotFound/></Route>
           </Switch>
         </div>

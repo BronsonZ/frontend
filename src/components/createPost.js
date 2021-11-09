@@ -3,8 +3,8 @@ import { useHistory } from "react-router-dom";
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
-  const [name, setName] = useState("");
-  const [contents, setContents] = useState("");
+  const [username, setUserName] = useState("");
+  const [content, setContent] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [image, setImage] = useState("");
   const history = useHistory();
@@ -31,18 +31,19 @@ const CreatePost = () => {
       body: formData,
     })
       .then((res) => {
-        if (res.ok) {
-          return res.json();
+        if (!res.ok) {
+          alert("Error uploading image");
+          return null;
         }
-        return null;
+        return res.json();
       })
       .then((data) => {
         if (data == null) {
-          post = { title, contents, name };
+          post = { title, content, username };
           return post;
         }
         img = data.public_id;
-        post = { title, contents, name, img };
+        post = { title, content, username, img };
         return post;
       })
       .then((post) => {
@@ -72,7 +73,7 @@ const CreatePost = () => {
     if (image) {
       uploadIamge(post);
     } else {
-      post = { title, contents, name };
+      post = { title, content, username };
       uploadPost(post);
     }
   };
@@ -88,18 +89,18 @@ const CreatePost = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         ></input>
-        <label>Contents</label>
+        <label>Content</label>
         <textarea
           required
-          value={contents}
-          onChange={(e) => setContents(e.target.value)}
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
         ></textarea>
         <label>Author</label>
         <input
           type="text"
           required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={username}
+          onChange={(e) => setUserName(e.target.value)}
         ></input>
         <label>Optional Image(max 10MB)</label>
         <input
