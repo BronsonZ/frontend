@@ -1,13 +1,140 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle&family=Oxygen&family=Roboto&family=Space+Mono&family=Teko:wght@500&family=Ubuntu&family=Varela+Round&display=swap');
+
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Varela Round', sans-serif;
+  color: #ffffff;
+
+}
+.App {
+  background-color: #37425B;
+  min-height: 100vh;
+  overflow:auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar */
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100vh;
+  margin: 0 auto;
+  border-bottom: 3px solid #ffffff;
+  margin-left: auto;
+}
+.navbar h1 {
+  font-style: italic;
+  font-weight: bold;
+}
+.links {
+  margin-left: auto;
+}
+.navbar a {
+  text-decoration: none;
+  padding: 6px;
+}
+
+
+/* Home Page */
+.home p{
+  text-align: center;
+}
+.content {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  padding-top: 0;
+}
+
+/* Post List Page */
+.post-list h1{
+  text-align: center;
+}
+.post{
+  background-color: #293650;
+  border: 3px solid #ffffff;
+  border-radius: 13px;
+  margin: 20px 0;
+  text-align: center;
+}
+.post:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.445);
+}
+.post h2 {
+  font-size: 20px;
+  color: #ffffff;
+  padding-top: 3vh;
+}
+.post a{
+  text-decoration: none;
+}
+.post p{
+  padding-bottom: 3vh;
+  padding-top: 1vh;
+  font-size: 19px;
+  overflow-wrap: break-word;
+}
+.post div{
+  padding-bottom: 1.5vh;
+}
+
+/* User Post List */
+.users-posts p{
+  text-align: center;
+}
+.user-post-list h1{
+  text-align: center;
+}
+.user-post {
+  background-color: #293650;
+  border: 3px solid #ffffff;
+  border-radius: 13px;
+  margin: 20px 0;
+  text-align: center;
+}
+.user-post h2 {
+  font-size: 20px;
+  color: #ffffff;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+}
+.user-post p{
+  padding-bottom: 1.5vh;
+  padding-top: 1.5vh;
+  font-size: 19px;
+  overflow-wrap: break-word;
+}
+
+/* Create new post page */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create label {
+  text-align: left;
+  display: flex;
+}
+.create h2 {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: flex;
+  color: #37425B;
+}
+.create button {
+  background: #ffffff;
+  color: #37425B;
+  border: 0;
+  padding: 8px;
+  border-radius: 13px;
+  cursor: pointer;
 }
