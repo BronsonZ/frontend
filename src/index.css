@@ -6,6 +6,7 @@
   margin: 0;
   font-family: 'Varela Round', sans-serif;
   color: #ffffff;
+
 }
 .App {
   background-color: #37425B;
@@ -22,6 +23,10 @@
   margin: 0 auto;
   border-bottom: 3px solid #ffffff;
   margin-left: auto;
+}
+.navbar h1 {
+  font-style: italic;
+  font-weight: bold;
 }
 .links {
   margin-left: auto;
@@ -40,6 +45,7 @@
   max-width: 700px;
   margin: 40px auto;
   padding: 20px;
+  padding-top: 0;
 }
 
 /* Post List Page */
