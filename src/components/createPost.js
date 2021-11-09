@@ -11,13 +11,25 @@ const CreatePost = () => {
 
   const imageSet = (e) => {
     let file = e.target.files[0];
-    if (file && file.size > 10000000) {
+
+    if (file) {
+      if (!(JSON.stringify(file.type).includes('image/?'))) {
+        setImage("");
+        e.target.value = null;
+        alert("Error: Not an image file");
+      } else if (file.size > 10000000) {
+        setImage("");
+        e.target.value = null;
+        alert("Sorry, image size can not exceed 10MB");
+      } else {
+        setImage(file)
+      }
+    } else {
       setImage("");
       e.target.value = null;
-      alert("Sorry, file size can not exceed more than 10MB");
-    } else if (file) {
-      setImage(file);
     }
+    
+    
   };
 
   const uploadIamge = post => {
@@ -89,13 +101,13 @@ const CreatePost = () => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         ></input>
-        <label>Content</label>
+        <label>Caption/Content</label>
         <textarea
           required
           value={content}
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
-        <label>Author</label>
+        <label>Username</label>
         <input
           type="text"
           required
@@ -105,8 +117,8 @@ const CreatePost = () => {
         <label>Optional Image(max 10MB)</label>
         <input
           type="file"
-          style={{ border: 0, color: "#ffffff" }}
-          accept=".jpg, .png"
+          style={{ border: 0, color: "#ffffff", padding: 0 }}
+          accept=".jpg,.jpeg,.png,.gif,.tiff"
           onChange={(e) => imageSet(e)}
         ></input>
         {!isLoading && <button>Add Post</button>}
