@@ -3,12 +3,10 @@ import { Image, Placeholder } from 'cloudinary-react';
 
 const PostList = ({ posts, title }) => {
 
-  const sortedPosts = posts.sort();
-
   return (
     <div className="post-list">
       <h1>{title}</h1>
-      {sortedPosts.map((post) => (
+      {posts.map((post) => (
         <div className="post" key={post.uuid}>
           <Link to={`/users/${post.username}`}>
             <h2>{ post.title }</h2>
