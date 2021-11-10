@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# `Frontend webpage for Cloudflare internship general assignment "AstroMedia" 🔭🪐✨🌌`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my submission for the frontend section of the Cloudflare internship [`general assignment`](https://apply.cloudflareworkers.com/)
 
-## Available Scripts
+I call my website "AstroMedia" because it is intended to host cool and interesting astronomy/cosmology photos. I love astronomy so I thought this would be the most interesting way to demonstrate the working product.
 
-In the project directory, you can run:
+It is written with ReactJS, created with [`Create React App`](https://github.com/facebook/create-react-app).
 
-### `npm start`
+This frontend connects with my Worker backend to retrieve all the posts. Images are hosted on cloudinary using their React SDK.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You can browse all posts at the home page or click on a post to see all posts by that one user.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+There is a "new post" button at the top right that allows you to create a new post by adding a title, caption/content, username, as well as an optional image. If you're reading this then please feel free to add a post/image!
 
-### `npm test`
+While designing the website I made sure everything worked on mobile as well, since social media is extremely popular on mobile, so please don't be afraid to pull it up on your phone to see how everything looks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I will admit that this was my first time using JavaScript/React/HTML/CSS extensively so there are bound to be obvious mistakes but I did my best to make everything as optimized as possible.
 
-### `npm run build`
+Thank you!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Author
+Bronson Zell
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bzell007@gmail.com
