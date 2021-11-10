@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import TextareaAutosize from 'react-textarea-autosize';
+import TextareaAutosize from "react-textarea-autosize";
+
+// Page to create a new post, does not allow user to post anything over 10MB or a file that is not an image
+// Post data is sent to the backend worker KV
+// Images are stored in cloudinary
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -14,7 +18,7 @@ const CreatePost = () => {
     let file = e.target.files[0];
 
     if (file) {
-      if (!JSON.stringify(file.type).includes('image')) {
+      if (!JSON.stringify(file.type).includes("image")) {
         setImage("");
         e.target.value = null;
         alert("Error: Not an image file");
@@ -23,13 +27,12 @@ const CreatePost = () => {
         e.target.value = null;
         alert("Sorry, image size can not exceed 10MB");
       } else {
-        setImage(file)
+        setImage(file);
       }
-    } 
-    
+    }
   };
 
-  const uploadIamge = post => {
+  const uploadIamge = (post) => {
     let img;
     let formData = new FormData();
     formData.append("file", image);

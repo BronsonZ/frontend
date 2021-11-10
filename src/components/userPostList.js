@@ -1,28 +1,40 @@
-import { Image, Placeholder } from 'cloudinary-react';
-import NotFound from './notFound'
+import { Image, Placeholder } from "cloudinary-react";
+import NotFound from "./notFound";
+
+// Lists all the posts of the given user
 
 const UserPostList = ({ posts, title }) => {
-  
-
-    if(posts.length === 0){
-      return (
-        <h2 style={{textAlign: 'center'}}>User Not Found<NotFound/></h2>
-      )
-    }
-    
-
-
+  if (posts.length === 0) {
     return (
-      <div className="user-post-list">
-          <h1>{title}</h1>
-        {posts.map(post => (
-          <div className="user-post" key={post.uuid} >
-            <h2>{ post.title }</h2>
-            {post.img && <Image cloudName="dar0pitop" publicId={post.img} loading="lazy" width="100%" quality="auto" fetchFormat="auto"><Placeholder type="blur"/></Image>}
-            <p>{post.content}</p>
-          </div>
-        ))}
-      </div>
+      <h2 style={{ textAlign: "center" }}>
+        User Not Found
+        <NotFound />
+      </h2>
     );
   }
-  export default UserPostList;
+
+  return (
+    <div className="user-post-list">
+      <h1>{title}</h1>
+      {posts.map((post) => (
+        <div className="user-post" key={post.uuid}>
+          <h2>{post.title}</h2>
+          {post.img && (
+            <Image
+              cloudName="dar0pitop"
+              publicId={post.img}
+              loading="lazy"
+              width="100%"
+              quality="auto"
+              fetchFormat="auto"
+            >
+              <Placeholder type="blur" />
+            </Image>
+          )}
+          <p>{post.content}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
+export default UserPostList;
