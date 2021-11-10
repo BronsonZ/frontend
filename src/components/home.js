@@ -10,11 +10,26 @@ const Home = () => {
     error,
   } = useFetch("https://worker.bronsonz.workers.dev/posts");
 
+  const handleSort = (posts) => {
+    posts.sort((a, b) => {
+      let ta = a.title.toLowerCase();
+      let tb = b.title.toLowerCase();
+      if (ta < tb) {
+        return -1;
+      }
+      if (ta > tb) {
+        return 1;
+      }
+      return 0;
+    });
+    return posts;
+  };
+
   return (
     <div className="home">
       {error && <p>{error}</p>}
       {isLoading && <p>loading posts...</p>}
-      {posts && <PostList posts={posts} title="All Posts" />}
+      {posts && <PostList posts={handleSort(posts)} title="All Posts" />}
     </div>
   );
 };
