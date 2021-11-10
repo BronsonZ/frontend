@@ -7,7 +7,7 @@ const UsersPosts = () => {
     const{ username } = useParams();
     const {data, isLoading, error} = useFetch('https://worker.bronsonz.workers.dev/post');
 
-    return ( 
+    return (
         <div className="users-posts">
             {error && <p>{error}</p>}
             {isLoading && <p>loading posts...</p>}
