@@ -100,7 +100,6 @@ const CreatePost = () => {
         ></input>
         <label>Caption/Content</label>
         <TextareaAutosize
-          autoFocus
           required
           value={content}
           onChange={(e) => setContent(e.target.value)}
