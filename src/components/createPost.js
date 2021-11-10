@@ -64,7 +64,7 @@ const CreatePost = () => {
   };
 
   const uploadPost = (post) => {
-    fetch("https://worker.bronsonz.workers.dev/post", {
+    fetch("https://worker.bronsonz.workers.dev/posts", {
       mode: "no-cors",
       method: "POST",
       headers: {

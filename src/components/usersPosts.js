@@ -7,7 +7,7 @@ import UserPostList from "./userPostList";
 const UsersPosts = () => {
   const { username } = useParams();
   const { data, isLoading, error } = useFetch(
-    "https://worker.bronsonz.workers.dev/post"
+    "https://worker.bronsonz.workers.dev/posts"
   );
 
   return (

@@ -8,7 +8,7 @@ const Home = () => {
     data: posts,
     isLoading,
     error,
-  } = useFetch("https://worker.bronsonz.workers.dev/post");
+  } = useFetch("https://worker.bronsonz.workers.dev/posts");
 
   return (
     <div className="home">

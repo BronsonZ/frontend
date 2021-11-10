@@ -4,7 +4,7 @@ This is my submission for the frontend section of the Cloudflare internship [`ge
 
 The deployed version can be found [`here`](https://frontend-bx9.pages.dev/)
 
-The deployed worker API can be found [`here`](https://worker.bronsonz.workers.dev/) all requests must be sent to "/post"
+The deployed worker API can be found [`here`](https://worker.bronsonz.workers.dev/) all requests must be sent to "/posts"
 
 ## Intro
 
