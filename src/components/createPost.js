@@ -13,7 +13,7 @@ const CreatePost = () => {
     let file = e.target.files[0];
 
     if (file) {
-      if (!(JSON.stringify(file.type).includes('image/?'))) {
+      if (!JSON.stringify(file.type).includes('image')) {
         setImage("");
         e.target.value = null;
         alert("Error: Not an image file");
@@ -24,11 +24,7 @@ const CreatePost = () => {
       } else {
         setImage(file)
       }
-    } else {
-      setImage("");
-      e.target.value = null;
-    }
-    
+    } 
     
   };
 
