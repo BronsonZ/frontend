@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import TextareaAutosize from 'react-textarea-autosize';
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -98,11 +99,12 @@ const CreatePost = () => {
           onChange={(e) => setTitle(e.target.value)}
         ></input>
         <label>Caption/Content</label>
-        <textarea
+        <TextareaAutosize
+          autoFocus
           required
           value={content}
           onChange={(e) => setContent(e.target.value)}
-        ></textarea>
+        ></TextareaAutosize>
         <label>Username</label>
         <input
           type="text"
