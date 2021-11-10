@@ -1,4 +1,4 @@
-import { Image, Placeholder } from "cloudinary-react";
+import { Image } from "cloudinary-react";
 import NotFound from "./notFound";
 
 // Lists all the posts of the given user
@@ -27,9 +27,7 @@ const UserPostList = ({ posts, title }) => {
               width="100%"
               quality="auto"
               fetchFormat="auto"
-            >
-              <Placeholder type="blur" />
-            </Image>
+            />
           )}
           <p>{post.content}</p>
         </div>

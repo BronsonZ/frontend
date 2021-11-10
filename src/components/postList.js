@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Image, Placeholder } from "cloudinary-react";
+import { Image } from "cloudinary-react";
 
 // List of all posts from all users
 
@@ -20,9 +20,7 @@ const PostList = ({ posts, title }) => {
                 width="100%"
                 quality="auto"
                 fetchFormat="auto"
-              >
-                <Placeholder type="blur" />
-              </Image>
+              />
             )}
             <p>{post.content}</p>
           </Link>
