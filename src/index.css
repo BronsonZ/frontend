@@ -102,6 +102,7 @@
 }
 
 .user-post-list h1 {
+  overflow-wrap: break-word;
   text-align: center;
   text-shadow: 0px 0px 20px rgb(130, 130, 130, 0.9);
 }
