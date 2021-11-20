@@ -66,6 +66,7 @@
   border-radius: 13px;
   margin: 20px 0;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .post:hover {
@@ -85,11 +86,13 @@
 .post p {
   padding: 1vh 1vh 3vh 1vh;
   font-size: 19px;
-  overflow-wrap: break-word;
+  
 }
 
 .post div {
   padding-bottom: 1.5vh;
+  padding-left: 1vh;
+  padding-right: 1vh;
 }
 
 /* User Post List */
